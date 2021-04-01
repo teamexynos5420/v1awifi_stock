@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin-config>
+
+<!-- platform_selector -->
+<module>
+	<linktype>dll</linktype> 
+	<dllname>libplatform_selector.so</dllname>
+	<interface name="conIPlatformSelector">1A6DC93B-4A34-4555-8202-E225DDF50BCC</interface>
+	<interface name="conIDataSource">4F256C74-4E3C-4e34-846C-40504E328118</interface>
+</module>
+
+
+<!-- participants -->
+<module>  
+	<linktype>dll</linktype>   
+	<dllname>libparticipants.so</dllname>   		
+	<interface name="conPrivilegeControl">2757DE76-CF36-4b3a-A825-62F9DDB38A55</interface>
+	<interface name="conIParticipants">4B9FECE5-4E99-4A9B-BE6E-327A504C5DEB</interface>                		 
+</module>
+
+<!-- audio_engine -->
+<module>
+	<linktype>dll</linktype> 
+	<dllname>libaudio_engine.so</dllname>
+	<preload>libtimer.so</preload>
+	<preload>libutility.so</preload>
+	<interface name="conIAudioEngine">31378E4A-265D-40E4-8A19-8E8C1D0C5D4F</interface>
+</module>
+
+<!-- audio_device -->
+<module>
+	<linktype>dll</linktype> 
+	<dllname>libaudio_device.so</dllname>
+	<interface name="conIAudioDeviceController">D8EC8347-1107-4991-AD92-48C35E77B5FC</interface>
+</module>
+
+<!-- audio_service -->
+<module>
+	<linktype>dll</linktype> 
+	<dllname>libaudio_service.so</dllname>
+	<interface name="conIAudioService">9819DD58-9E4E-46C3-B835-1FA3B56BD71B</interface>
+</module>
+
+
+<!-- hybrid_audio_agent -->
+<module>
+	<linktype>dll</linktype> 
+	<dllname>libeureka_audio_agent.so</dllname>
+	
+	<interface name="conIEurekaVoipAgentSignal">45B2FD19-B745-4a62-9D9E-979597D51876</interface>
+	<interface name="conIEurekaVoipAgentRtp">2904C731-5E65-4cd4-A4C9-851ED8B33A25</interface>
+	<interface name="conIEurekaVoipAgentRtcp">A22FBF7C-D34D-4c10-A46D-BFEFD4C86C9E</interface>	
+	<interface name="conIBroadcastAgentSignal">DBC9AB4D-F2C8-418a-9CB7-8994541C2527</interface>
+	<interface name="IAVSyncCtrl">ACEE32AF-978B-4b0a-BA49-E8A83AB04A87</interface>
+</module>
+
+<!-- utility -->
+<module>
+	<linktype>dll</linktype> 
+	<dllname>libutility.so</dllname>
+	<interface name="conIThreadAffinity">B7609D0B-654B-4F18-AFE9-8846BDC4848E</interface>
+	<interface name="conIVersionController">B021953D-F0DC-41b0-899E-0621272CB9E2</interface>
+	<interface name="conIClientOSTypeController">76907975-C5F4-46ca-A220-C5CB5A2C9874</interface>
+	<interface name="conIExceptionHandler">AFC915CC-5DB3-484b-B212-7E3F5B2843FB</interface>
+	<interface name="conIProxyTrust">D6DF361B-C770-44c3-B1B9-7F04BDAA6FDD</interface>
+	<interface name="conISystemInformation">B8C038BD-D90F-424C-AC09-6C583B2AB4DA</interface>
+</module>
+
+<!-- wmcs warp -->
+<module>
+	<linktype>dll</linktype> 
+	<dllname>libwmcs.so</dllname>
+	<preload>libtimer.so</preload>
+	<interface name="conIEurekaTeleAgentSignal">BCB6225D-A3B6-43AF-89FC-3772C2D4EABD</interface>
+	<interface name="conIRecoder">807A19EC-2570-43bd-8359-45F6C8DBA95C</interface>
+</module>
+
+
+</plugin-config>
